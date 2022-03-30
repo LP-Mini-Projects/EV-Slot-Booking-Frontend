@@ -1,58 +1,3 @@
-/* .loginImg {
-	width: 33%;
-	background-color: blue;
-	height: 700px;
-	display: flex;
-    opacity: 1;
-	justify-content: flex-end;
-    background-blend-mode: luminosity;
-    background-size: cover;
-}
-
-.login_text {
-    background-color: #ececed;
-    border-radius: 35px;
-    padding: 10px;
-	position: absolute;
-    top: 20px;
-    left: 835px;
-    font-weight: bolder;
-    font-family: sans-serif;
-    text-overflow: hide;
-}
-
-.signup_text {
-    background-color: #ececed;
-    border-radius: 35px;
-    padding: 15px;
-	position: absolute;
-    top: 60px;
-    left: 825px;
-    font-weight: bolder;
-    font-family: sans-serif;
-}
-
-.welcome_text{
-    top: 200px;
-    position: absolute;
-    left: 935px;
-    color: white;
-    font-size: 50px;
-    font-weight: bolder;
-    font-family: sans-serif;
-}
-
-.div {
-	background-color: #ececed;
-	float: left;
-	width: 66%;
-	height: 700px;
-} */
-
-/* body{
-    font-family: Montserrat;
-} */
-
 .loginImg {
 	background-size: cover;
 	background-position: center;
@@ -63,13 +8,13 @@
 	background-color: #ececed !important;
 }
 
-.main_btn{
-    border: 3px solid #1F2128 !important;
-    color: #1F2128 !important;
+.main_btn {
+	border: 3px solid #1f2128 !important;
+	color: #1f2128 !important;
 }
 
-.main_btn:hover{
-    border: 3px solid #69FFF1 !important;
-    background-color: #1F2128 !important;
-    color: #69FFF1 !important;
+.main_btn:hover {
+	border: 3px solid #69fff1 !important;
+	background-color: #1f2128 !important;
+	color: #69fff1 !important;
 }

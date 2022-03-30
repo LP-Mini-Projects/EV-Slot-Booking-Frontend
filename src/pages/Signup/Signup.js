@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import cover from "../../assets/images/cover.png";
 import logo from "../../assets/images/LPlogo.png";
@@ -11,23 +10,28 @@ import Typography from "@mui/material/Typography";
 import { useNavigate } from "react-router-dom";
 
 export default function SignInSide() {
-	const [person, setPerson] = useState({ email: '', password: '', phone: '', pincode: '' });
+	const [person, setPerson] = useState({
+		email: "",
+		password: "",
+		phone: "",
+		pincode: "",
+	});
 	const [people, setPeople] = useState([]);
 
 	const handleChange = (e) => {
-		const name = e.target.name
-		const value = e.target.value
-		setPerson({ ...person, [name]: value ? value : null })
-	}
+		const name = e.target.name;
+		const value = e.target.value;
+		setPerson({ ...person, [name]: value ? value : null });
+	};
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		console.log(person.email)
+		console.log(person.email);
 		console.log(person);
 		if (person.email && person.password && person.phone && person.pincode) {
 			const newPerson = { ...person };
 			setPeople([...people, newPerson]);
-			setPerson({ email: '', password: '', phone: '', pincode: '' });
+			setPerson({ email: "", password: "", phone: "", pincode: "" });
 
 			var formdata = new FormData();
 			formdata.append("email", newPerson.email);
@@ -36,24 +40,26 @@ export default function SignInSide() {
 			formdata.append("pincode", person.pincode);
 
 			var requestOptions = {
-				method: 'POST',
+				method: "POST",
 				body: formdata,
-				redirect: 'follow'
+				redirect: "follow",
 			};
 
 			fetch("https://findmyplug.herokuapp.com/register/", requestOptions)
-				.then(response => response)
-				.then(result => console.log(result))
-				.catch(error => console.log('fgsla', error));
+				.then((response) => response)
+				.then((result) => console.log(result))
+				.catch((error) => console.log("fgsla", error));
 		}
 	};
-
-
 
 	let navigate = useNavigate();
 
 	return (
-		<Grid container component="main" sx={{ height: "100vh", overflow: "hidden" }}>
+		<Grid
+			container
+			component="main"
+			sx={{ height: "100vh", overflow: "hidden" }}
+		>
 			<Grid
 				item
 				xs={12}
@@ -64,13 +70,22 @@ export default function SignInSide() {
 				square
 				backgroundColor="#ececed"
 			>
-				<img src={logo} alt="cover-img" style={{ marginTop: '25px', display: "flex", justifyContent: 'flex-start', marginLeft: '25px' }} />
+				<img
+					src={logo}
+					alt="cover-img"
+					style={{
+						marginTop: "25px",
+						display: "flex",
+						justifyContent: "flex-start",
+						marginLeft: "25px",
+					}}
+				/>
 				<Box
 					sx={{
 						display: "flex",
 						flexDirection: "column",
 						alignItems: "center",
-						justifyContent: 'center'
+						justifyContent: "center",
 					}}
 				>
 					<Typography
@@ -91,11 +106,28 @@ export default function SignInSide() {
 							display: "flex",
 							flexDirection: "column",
 							alignItems: "center",
-							justifyContent: 'center'
+							justifyContent: "center",
 						}}
 					>
-						<Grid container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-							<Grid item md={6} sm={12} xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+						<Grid
+							container
+							style={{
+								display: "flex",
+								justifyContent: "center",
+								alignItems: "center",
+							}}
+						>
+							<Grid
+								item
+								md={6}
+								sm={12}
+								xs={12}
+								style={{
+									display: "flex",
+									justifyContent: "center",
+									alignItems: "center",
+								}}
+							>
 								<TextField
 									margin="normal"
 									required
@@ -108,7 +140,17 @@ export default function SignInSide() {
 									sx={{ mt: 3, mb: 2, mr: 5, width: "300px" }}
 								/>
 							</Grid>
-							<Grid item md={6} sm={12} xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+							<Grid
+								item
+								md={6}
+								sm={12}
+								xs={12}
+								style={{
+									display: "flex",
+									justifyContent: "center",
+									alignItems: "center",
+								}}
+							>
 								<TextField
 									margin="normal"
 									required
@@ -123,8 +165,25 @@ export default function SignInSide() {
 							</Grid>
 						</Grid>
 
-						<Grid container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-							<Grid item md={6} sm={12} xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+						<Grid
+							container
+							style={{
+								display: "flex",
+								justifyContent: "center",
+								alignItems: "center",
+							}}
+						>
+							<Grid
+								item
+								md={6}
+								sm={12}
+								xs={12}
+								style={{
+									display: "flex",
+									justifyContent: "center",
+									alignItems: "center",
+								}}
+							>
 								<TextField
 									margin="normal"
 									required
@@ -137,7 +196,17 @@ export default function SignInSide() {
 									sx={{ mt: 3, mb: 2, mr: 5, width: "300px" }}
 								/>
 							</Grid>
-							<Grid item md={6} sm={12} xs={12} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+							<Grid
+								item
+								md={6}
+								sm={12}
+								xs={12}
+								style={{
+									display: "flex",
+									justifyContent: "center",
+									alignItems: "center",
+								}}
+							>
 								<TextField
 									margin="normal"
 									required
@@ -152,9 +221,31 @@ export default function SignInSide() {
 								/>
 							</Grid>
 						</Grid>
-						<p style={{ textAlign: 'center', fontSize: '0.89rem', color: '#1F2128' }}>Already have an account? <span onClick={() => navigate('/login')} style={{ cursor: 'pointer', color: 'blue' }}>Login</span></p>
+						<p
+							style={{
+								textAlign: "center",
+								fontSize: "0.89rem",
+								color: "#1F2128",
+							}}
+						>
+							Already have an account?{" "}
+							<span
+								onClick={() => navigate("/login")}
+								style={{ cursor: "pointer", color: "blue" }}
+							>
+								Login
+							</span>
+						</p>
 
-						<Grid container style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginLeft: '-35px' }}>
+						<Grid
+							container
+							style={{
+								display: "flex",
+								justifyContent: "center",
+								alignItems: "center",
+								marginLeft: "-35px",
+							}}
+						>
 							<Button
 								className="main_btn"
 								type="submit"
@@ -169,17 +260,16 @@ export default function SignInSide() {
 									alignItems: "center",
 									flexDirection: "column",
 									fontWeight: "bold",
-									"&:hover": { color: "#69FFF1", backgroundColor: "black" }
-
+									"&:hover": { color: "#69FFF1", backgroundColor: "black" },
 								}}
-							// sx={{ "&:hover": { color: "#69FFF1", backgroundColor:"black"} }}
+								// sx={{ "&:hover": { color: "#69FFF1", backgroundColor:"black"} }}
 							>
 								Sign Up
 							</Button>
 						</Grid>
-					</Box >
-				</Box >
-			</Grid >
+					</Box>
+				</Box>
+			</Grid>
 
 			<Grid
 				item
@@ -216,7 +306,7 @@ export default function SignInSide() {
 						paddingBottom: "10px",
 						color: "#ECECED",
 						fontWeight: "bold",
-						borderRadius: '0px 25px 25px 0px !important'
+						borderRadius: "0px 25px 25px 0px !important",
 					}}
 				>
 					Login
@@ -240,7 +330,7 @@ export default function SignInSide() {
 						paddingBottom: "10px",
 						color: "#1F2128",
 						fontWeight: "bold",
-						borderRadius: '0px 25px 25px 0px !important'
+						borderRadius: "0px 25px 25px 0px !important",
 					}}
 				>
 					Sign Up
@@ -255,12 +345,12 @@ export default function SignInSide() {
 						mt: -55,
 						mr: 12,
 						ml: 15,
-						opacity: 1
+						opacity: 1,
 					}}
 				>
 					Hey there!
 				</Typography>
 			</Grid>
-		</Grid >
+		</Grid>
 	);
 }

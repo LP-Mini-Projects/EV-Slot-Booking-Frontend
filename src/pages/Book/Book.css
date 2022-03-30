@@ -1,164 +1,204 @@
-.BookContainerGrid{
-    background-color: #1F2128;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 7px;
+.BookContainerGrid {
+	background-color: #1f2128;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 7px;
 }
-body{
-    background-color: #ECECED;
+body {
+	background-color: #ececed;
 }
-.BookContent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
-    padding: 50px;
-}
-
-.circle{
-    background-color: #1F2128;
-    color: #69FFF1;
-    padding: 25px;
-    border-radius: 50%;
-    border: 5px solid #768991;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -50px ;
+.BookContent {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0px;
+	padding: 50px;
 }
 
-.EVIcon{
-    width: 50px !important;
-    height: 50px !important;
+.circle {
+	background-color: #1f2128;
+	color: #69fff1;
+	padding: 25px;
+	border-radius: 50%;
+	border: 5px solid #768991;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: -50px;
 }
 
-.BookingDetailsGrid{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.EVIcon {
+	width: 50px !important;
+	height: 50px !important;
 }
 
-.BookingInfo{
-    color: #ECECED;
-    margin: 0;
-    font-size: small;
+.BookingDetailsGrid {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
 }
 
-.BookingInfoOuterGrid{
-    width: 100%;
+.BookingInfo {
+	color: #ececed;
+	margin: 0;
+	font-size: small;
 }
 
-.BookingDetailsGridItem{
-    padding: 50px;
+.BookingInfoOuterGrid {
+	width: 100%;
 }
 
-.priceDiv{
-    background-color: #768991;
-    color: #ECECED;
-    border: 2px dashed #69FFF1;
-    border-radius: 30px 0px 0px 30px;
-    padding: 10px 40px;
+.BookingDetailsGridItem {
+	padding: 50px;
 }
 
-.priceDiv h2{
-    margin: 0;
+.priceDiv {
+	background-color: #768991;
+	color: #ececed;
+	border: 2px dashed #69fff1;
+	border-radius: 30px 0px 0px 30px;
+	padding: 10px 40px;
 }
 
-.BookingFormOuterDiv{
-    width: 100%;
-    padding: 0px 50px ;
-    color: #ECECED;
+.priceDiv h2 {
+	margin: 0;
+}
+
+.BookingFormOuterDiv {
+	width: 100%;
+	padding: 0px 50px;
+	color: #ececed;
 }
 
 /* .BookingFormOuterDiv h2{
     padding: 0px 50px ;
 } */
 
-.BookingFormInnerDiv{
-    background-color: #ECECED;
-    border-radius: 5px;
+.BookingFormInnerDiv {
+	background-color: #ececed;
+	border-radius: 5px;
 }
 
-.textField{
-    width: 50% !important;
+.textField {
+	width: 50% !important;
 }
 
-.text-Field{
-    width: 12% !important;
+.text-Field {
+	width: 12% !important;
 }
 
-.duration{
-    color: black;
-    margin-right: 1em;
+.duration {
+	color: black;
+	margin-right: 1em;
 }
 
-.duration_button{
-    /* width: 50px; */
-    height: 50px;
-    justify-content: flex;
-    align-items: center;
-    /* margin-right: 8em; */
+.duration_button {
+	/* width: 50px; */
+	height: 50px;
+	justify-content: flex;
+	align-items: center;
+	/* margin-right: 8em; */
 }
 
-.textFieldContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    row-gap: 0px;
-    column-gap: 90px;
-    padding: 20px 40px;
-    /* background-color: #768991; */
+.textFieldContainer {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	row-gap: 0px;
+	column-gap: 90px;
+	padding: 20px 40px;
 }
 
-.main_bt{
-    border: 3px solid #1F2128 !important;
-    border: 3px solid #69FFF1 !important;
-    /* color: #1F2128 !important; */
+.date_picker {
+	/* display: flex; */
+	/* justify-content: flex; */
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* width: 100%; */
+	/* width: 300px !important; */
+	row-gap: 0px;
+	/* column-gap: 90px; */
+	padding: 20px 40px;
 }
 
-.main_bt:hover{
-    border: 3px solid #69FFF1 !important;
-    background-color: #1F2128 !important;
-    color: #69FFF1 !important;
+.duration {
+	display: flex;
+	justify-content: flex-end;
+	/* align-items: center; */
+	width: 50%;
+	row-gap: 0px;
+	column-gap: 90px;
+	padding: 20px 40px;
 }
 
-
-.BookingFormPaymentMethod{
-    padding: 0px 50px;
-    width: 100%;
+.capacity {
+	display: flex;
+	justify-content: flex;
+	align-items: center;
+	width: 300px;
+	row-gap: 0px;
+	column-gap: 90px;
+	/* padding: 20px 40px; */
 }
 
-.BookingFormPaymentMethod h2{
-    color: #ECECED;
+.plug_type {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	row-gap: 0px;
+	/* column-gap: 90px; */
+	padding: 20px 40px;
 }
 
-.paymentOptions{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
-    background: rgba(118, 137, 145, 0.1);
-    box-shadow: inset 12.5px -12.5px 12.5px rgba(90, 104, 110, 0.1), inset -12.5px 12.5px 12.5px rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(25px);
-    border-radius: 5px;
-    color: #ECECED;
-    cursor: pointer;
+.main_bt {
+	border: 3px solid #1f2128 !important;
+	border: 3px solid #69fff1 !important;
+	/* color: #1F2128 !important; */
 }
 
-.BookingFormConfirmReview{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    padding: 0px 50px;
-    column-gap: 20px;
+.main_bt:hover {
+	border: 3px solid #69fff1 !important;
+	background-color: #1f2128 !important;
+	color: #69fff1 !important;
 }
 
-.BookingFormConfirmReview h3{
-    color: #69FFF1;
-    cursor: pointer;
+.BookingFormPaymentMethod {
+	padding: 0px 50px;
+	width: 100%;
+}
+
+.BookingFormPaymentMethod h2 {
+	color: #ececed;
+}
+
+.paymentOptions {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 10%;
+	background: rgba(118, 137, 145, 0.1);
+	box-shadow: inset 12.5px -12.5px 12.5px rgba(90, 104, 110, 0.1),
+		inset -12.5px 12.5px 12.5px rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(25px);
+	border-radius: 5px;
+	color: #ececed;
+	cursor: pointer;
+}
+
+.BookingFormConfirmReview {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+	padding: 0px 50px;
+	column-gap: 20px;
+}
+
+.BookingFormConfirmReview h3 {
+	color: #69fff1;
+	cursor: pointer;
 }

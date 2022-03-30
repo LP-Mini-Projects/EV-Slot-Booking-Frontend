@@ -38,28 +38,25 @@ export default function LoginSide() {
 		})
 			.then((response) => response.json())
 			.then((result) => {
-				if(result.token ){
-					console.log(result.token)
-					navigate('/booking')
-				}else{
-					navigate('/signup')
-					alert('Invalid cred')
+				if (result.token) {
+					console.log(result.token);
+					navigate("/booking");
+				} else {
+					navigate("/signup");
+					alert("Invalid cred");
 				}
 				// result.token ? navigate("/booking"):
 				// alert("invalid"), navigate("/signup")
-				localStorage.setItem('token', result.token)
-				
+				localStorage.setItem("token", result.token);
 			})
 			.catch((error) => {
-				console.log(error)
-				alert('Invalid Credentials')
+				console.log(error);
+				alert("Invalid Credentials");
 			});
 		// eslint-disable-next-line no-console
 	};
 
 	const navigate = useNavigate();
-
-	
 
 	return (
 		<Grid
@@ -78,7 +75,16 @@ export default function LoginSide() {
 				backgroundColor="#ececed"
 			>
 				<div>
-					<img src={logo} alt="logo" style={{ marginTop: '25px', display: "flex", justifyContent: 'flex-start', marginLeft: '25px' }} />
+					<img
+						src={logo}
+						alt="logo"
+						style={{
+							marginTop: "25px",
+							display: "flex",
+							justifyContent: "flex-start",
+							marginLeft: "25px",
+						}}
+					/>
 
 					<Box
 						sx={{
@@ -134,24 +140,26 @@ export default function LoginSide() {
 								autoComplete="current-password"
 								onChange={(e) => setPassword(e.target.value)}
 							/>
-							<p style={{ textAlign: 'center', fontSize: '0.89rem', color: '#1F2128' }}>Don't have an account? <span onClick={() => navigate('/signup')} style={{ cursor: 'pointer', color: 'blue' }}>Sign Up</span></p>
+							<p
+								style={{
+									textAlign: "center",
+									fontSize: "0.89rem",
+									color: "#1F2128",
+								}}
+							>
+								Don't have an account?{" "}
+								<span
+									onClick={() => navigate("/signup")}
+									style={{ cursor: "pointer", color: "blue" }}
+								>
+									Sign Up
+								</span>
+							</p>
 							<Button
 								className="main_btn"
 								type="submit"
 								fullWidth
 								variant="outlined"
-								// onClick={() => {
-								// 	navigate("/booking");
-								// }}
-
-								// sx={{
-								// 	height: "50px",
-								// 	mt: 4,
-								// 	display: "flex",
-								// 	justifyContent: "center",
-								// 	alignItems: "center",
-								// 	flexDirection: "column"
-								// }}
 							>
 								Sign In
 							</Button>
@@ -196,7 +204,7 @@ export default function LoginSide() {
 						paddingBottom: "10px",
 						color: "#1F2128",
 						fontWeight: "bold",
-						borderRadius: '0px 25px 25px 0px !important'
+						borderRadius: "0px 25px 25px 0px !important",
 					}}
 				>
 					Login
@@ -220,9 +228,9 @@ export default function LoginSide() {
 						paddingBottom: "10px",
 						color: "#ECECED",
 						fontWeight: "bold",
-						borderRadius: '0px 25px 25px 0px !important',
+						borderRadius: "0px 25px 25px 0px !important",
 					}}
-				// sx={{ "&:hover": { backgroundColor:"white"} }}
+					// sx={{ "&:hover": { backgroundColor:"white"} }}
 				>
 					Sign Up
 				</Button>

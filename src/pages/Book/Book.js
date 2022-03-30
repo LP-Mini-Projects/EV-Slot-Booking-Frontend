@@ -25,6 +25,7 @@ import DatePicker from "@mui/lab/DatePicker";
 
 function Book() {
 	const location = useLocation();
+	const [selection, setSelection] = useState(0);
 	console.log(location.state);
 	const [booking, setBooking] = useState({
 		station: "",
@@ -37,6 +38,7 @@ function Book() {
 
 	const [val, setVal] = useState([0, 45]);
 	const updateRange = (e, data) => {
+		setSelection(data);
 		setVal(data);
 	};
 	const [value, setValue] = React.useState(null);
@@ -181,34 +183,21 @@ function Book() {
 						<h2 style={{ textAlign: "left" }}>Details : </h2>
 						<Grid container className="BookingFormInnerDiv">
 							<Grid item className="textFieldContainer">
-								<TextField
-									className="date"
-									margin="normal"
-									required
-									name="date"
-									label="Date"
-									value={booking.date}
-									onChange={handleChange}
-									type="Date"
-									id="date"
-									className="textField"
-									placeholder="Date"
-									sx={{
-										backgroundColor: "#768991",
-									}}
-								/>
-								{/* <LocalizationProvider dateAdapter={AdapterDateFns}>
+								<LocalizationProvider
+									dateAdapter={AdapterDateFns}
+									className="date_picker"
+								>
 									<DatePicker
-										label="Basic"
+										label="Date"
 										value={value}
 										onChange={(newValue) => {
 											setValue(newValue);
 										}}
 										renderInput={(params) => <TextField {...params} />}
 									/>
-								</LocalizationProvider> */}
+								</LocalizationProvider>
 
-								<Grid>
+								<Grid className="duration">
 									<ButtonGroup
 										variant="outlined"
 										margin="normal"
@@ -216,15 +205,30 @@ function Book() {
 										aria-label="outlined button group"
 										value={booking.duration}
 									>
-										<h3 className="duration">Duration:</h3>
-										<Button className="duration_button">1h</Button>
-										<Button className="duration_button">2h</Button>
-										<Button className="duration_button">3h</Button>
+										<h3>Duration:</h3>
+										<Button
+											className="duration_button"
+											onClick={() => setSelection(15)}
+										>
+											1h
+										</Button>
+										<Button
+											className="duration_button"
+											onClick={() => setSelection(30)}
+										>
+											2h
+										</Button>
+										<Button
+											className="duration_button"
+											onClick={() => setSelection(45)}
+										>
+											3h
+										</Button>
 									</ButtonGroup>
 								</Grid>
 							</Grid>
 							<Grid item className="textFieldContainer">
-								<Box sx={{ width: 350 }}>
+								<Box sx={{ width: 350 }} className="capacity">
 									<Slider
 										aria-label="Restricted values"
 										onChange={updateRange}
@@ -241,6 +245,7 @@ function Book() {
 										variant="outlined"
 										ref={anchorRef}
 										aria-label="split button"
+										className="plug_type"
 									>
 										<Button onClick={handleClick}>
 											{options[selectedIndex]}
